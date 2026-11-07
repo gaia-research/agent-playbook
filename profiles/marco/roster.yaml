@@ -1,0 +1,7 @@
+# Playbook data only; no executable defaults or implied compatibility.
+status: pending_cloud_memory
+assignments: []
+fallbacks: []
+# Empty means unresolved, not permission to inherit a runtime's fallback.
+# Each assignment needs role, model_alias, effort, harness, concurrency/budget
+# limits, source, and explicit escalation/fallback policy before dispatch.

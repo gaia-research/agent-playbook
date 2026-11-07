@@ -1,0 +1,6 @@
+# Playbook data only; not a harness configuration file.
+status: pending_cloud_memory
+models: []
+# Each verified entry should specify alias, provider, model_id, capability_tier,
+# supported_efforts, source_revision, verified_at, and limitations.
+# Availability, credentials, prices, and quotas must be checked locally at use.
