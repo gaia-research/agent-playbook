@@ -8,6 +8,6 @@ production deployment. Push and open a PR only if separately authorized.
 Done: regression demonstrated, fix validated, evidence and limitations recorded.
 Coordination: lead handles this small task; use an authorized reviewer if useful.
 Output: concise changed behavior, checks run, and unresolved issues. If GitHub
-handoff is authorized, invoke the handoff skill for its exact delivery receipt.
+handoff is authorized, follow PLAYBOOK.md for its exact delivery receipt.
 
 No model, billing route, or parallel-agent availability is assumed by this brief.

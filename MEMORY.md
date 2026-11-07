@@ -22,8 +22,7 @@ another model/provider or expand authority. Prefer existing canonical workflows.
 2. Separate universal defaults, an explicitly adopted personal profile, and
    project-local instructions. Within platform rules, current operator direction
    and applicable project instructions take precedence over profile defaults.
-3. Ask before adopting [Marco's profile](profiles/marco/PROFILE.md). It is currently
-   incomplete. Other users should start with [the template](profiles/template/PROFILE.md).
+3. Ask before adopting [Marco's profile](profiles/marco/PROFILE.md). It contains dated personal defaults, not universal rules. Other users should start with [the template](profiles/template/PROFILE.md).
 4. Propose stable memory entries: scope and authority boundaries, routing rationale,
    evidence standards, and confirmed personal communication/handoff preferences.
    Record source revision and scope. Keep live model availability, price, quota,
@@ -37,3 +36,9 @@ another model/provider or expand authority. Prefer existing canonical workflows.
    synchronization. Offer the proposed entries as text for another capable agent.
 7. Future updates need explicit user direction; compare revisions and apply only
    the approved changes. Repository edits alone never update platform memory.
+
+A request to remember these principles does not grant permission to install
+skills/hooks, execute commands, change credentials, or deploy. Preserve enduring
+decisions and their rationale; label verified facts, historical preferences,
+proposals, and unknowns separately. The supplied operator memory bridge is an
+explicit source of preferences, not evidence of cloud-memory access.

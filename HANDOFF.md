@@ -1,87 +1,87 @@
-# Cloud-agent handoff
+# Agent Playbook delivery handoff
 
-Status: BLOCKED — complete local scaffold; cloud-memory extraction and GitHub
-publication remain outstanding. Prepared 2026-11-08.
+Status: READY FOR REVIEW. Prepared 2026-11-08. Delivery scope is documentation and
+a public feature-branch PR, not installation, provider certification, or deployment.
 
-## Scope and architecture
+## Implementation and decisions
 
-The operator explicitly requested scaffolding only if cloud memory was unavailable.
-No cloud conversation-memory read capability was exposed in this session. Local
-memory is not a substitute. No cloud history was extracted or persistent memory
-written. No repository was published, PR opened, or branch pushed.
+Preserved original scaffold commit `42a61e4561997e6022ca7945ac83d0d7d6b4d129` in
+history. Reconciled it with the explicit “Recover and Publish Agent Playbook” memory
+bridge. Cloud-memory access is not a dependency. No private history or credentials
+were copied. The newer instruction supersedes the original four-skill proposal:
+only orchestrate and prompting remain; handoff and independent review are canonical
+PLAYBOOK conventions. MEMORY is the standalone conversational ingestion entry.
+Marco's dated profile and minimal YAML carry personal preferences; the template
+lets others replace those choices without changing either skill. MIT licensed.
 
-README routes two independent paths: MEMORY is a self-contained conversational
-entry; PLAYBOOK is canonical portable policy; four standalone skills implement
-procedures. Marco's profile is separate and incomplete; the template and examples
-allow others to adapt the core. YAML is non-native declarative data. MIT license.
-No runtime, CLI, package manager, required dependencies, or installations.
+The memory bridge establishes four-agent default concurrency, MAX/HIGH planning,
+cost per verified successful outcome, fail-closed specialist identity, and role
+preferences. Actual provider availability remains a local preflight fact. No runtime,
+mandatory package/CI, CLI, submodule, or duplicated pi-config implementation exists.
 
-## Sources and reconciliation
+## Sources and compatibility findings
 
-- Operator-supplied “Astra: Scaffold Gaia Agent Playbook” brief: architecture,
-  four skills, delivery format, consent boundaries, and quality criteria.
-- Current operator instructions: subagent naming labels and fully specified custom
-  task names. No mapping of those display labels to provider model IDs is inferred.
-- Local pi-config read-only snapshot at abbreviated HEAD `176a595`: README.md,
-  subagent.json.template, and docs/subagent-thinking-levels.md. The working tree
-  had modified agent/test files; these were not used to extract roster truth.
-- Available tool inventory: no cloud conversation-memory reader. A local memory
-  registry keyword search yielded no relevant Agent Playbook/cloud-memory entry.
+- Current recovery brief: authoritative personal preferences and two-skill scope.
+- pi-config committed snapshot `176a5956b7c35775b204e4bdb9e432521f33d730`:
+  agent frontmatter, settings/subagent templates, optional-package list, and subagent
+  guide. Used `git show HEAD:...` for model candidates to avoid dirty overrides.
+  Unrelated modified agent/test files were left untouched.
+- Installed package metadata/read-only source: `@parke.dev/pi-subagent` 0.8.0 and
+  `pi-antigravity` 0.12.0. README/schema document plan mode; policy and orchestrator
+  show retry/fallback resolution. Empty fallback arrays inherit defaults, so they
+  must not be presented as a way to disable fallback. Zero retries also leaves
+  fallback attempts enabled when the resolved list is nonempty. No child was launched.
+- Official Claude, Codex, Pi skill docs and DeepSeek model-list documentation were
+  read online. Links and installation locations appear in
+  [harnesses.md](profiles/marco/harnesses.md). No live skill installation was tested.
 
-Conflict requiring cloud reconciliation: pi-config's template configures fallback
-models; the brief requires no silent fallback. The scaffold preserves the brief's
-rule and requires inspection of effective runtime behavior before dispatch. It
-neither rewrites pi-config nor adopts those template routes as personal policy.
+Historical worker-flash/scout-flash/scout-lite aliases are absent. Existing exact
+candidates are listed separately from preference labels. Opus planner's configured
+HIGH differs from MAX-first preference; preflight must resolve support before an
+override. Haiku has no verified concrete mapping. Worker/planner identities are not
+automatically read-only reviewers. Agy's observed planner persona is an Antigravity
+provider path, not proof of an ACP integration. Model IDs are source-observed, not
+certified currently available through provider accounts. These are explicit local
+setup/preflight limitations, not blockers to publishing a portable playbook.
 
-Current provider model IDs, capabilities, native config syntax, AGY integration
-identity, historical role patterns, and fallback/escalation preferences have not
-been verified. Empty roster entries mean unresolved. The personal profile is not
-ready for plug-and-play use. Public compatibility claims must wait for official
-provider/harness documentation and canonical configuration checks.
+## Validation and walkthroughs
 
-## Validation evidence
+Documentation/structural checks, not real fresh-session or authenticated model tests:
 
-Static documentation validation, not live harness or fresh-model execution:
+1. ChatGPT: followed README → MEMORY → PLAYBOOK/profile. MEMORY is self-contained,
+   separates universal defaults from opt-in personal preferences, reconciles existing
+   memory, and describes context-only use when persistence is unavailable. A memory
+   request explicitly grants no installation/execution/deployment authority.
+2. Pi: followed README → orchestrate → profile/harness notes. An existing setup can
+   resolve candidates, inspect plan mode, check effective identity/permissions/effort
+   and failover, and stop on mismatches. Installation requires consent. An empty
+   fallback list must not be assumed to disable inherited configuration.
+3. Claude/Codex: followed README → prompting → PLAYBOOK delivery/review. Intent-first
+   prompts and the exact four-line receipt require no Pi dependency. Official skill
+   locations are linked; the install procedure preserves collisions and requires
+   verifying discovery after authorized copying.
 
-1. Fresh ChatGPT walkthrough: README → MEMORY → PLAYBOOK works without skills.
-   MEMORY distinguishes stable preferences from transient roster facts, requires
-   personal-profile consent, reconciles existing memory, and explicitly describes
-   context-only operation when persistence is unavailable. Expected result: useful
-   context, no unsupported claim that memory was saved.
-2. Fresh Pi walkthrough: README selects individual skills; harness notes require
-   version/schema/roster/fallback checks and consent before copying anything.
-   Empty model assignments prevent a claim of ready-to-run dispatch. Expected
-   result: bounded installation proposal; setup and real discovery remain untested.
-3. Fresh Codex/Claude walkthrough: Markdown procedures work as context without Pi;
-   installation is conditional on each target's verified discovery/security model.
-   Expected result: portable intent and evidence rules, no assumed native adapter.
+Static checks resolve local Markdown links, require exactly two skills with matching
+frontmatter, parse both YAML files, check roster aliases and concurrency, reject
+removed-skill references, verify the receipt, and scan tracked content for private
+paths/token patterns. Whitespace is checked with `git diff --check`.
+Results: PASS — 22 local Markdown links; exactly two matching skill headers;
+exact receipt; no stale removed-skill references or private-pattern matches.
+Both YAML documents parsed with the existing local `yaml` library (no dependency
+added): eight model preferences, six role mappings, and concurrency four.
+`git diff --check` passed. These are structural results, not provider tests.
 
-A Python static check resolves all relative Markdown links, requires four skill
-frontmatter names/descriptions, checks unresolved YAML markers, and checks the
-four-line handoff template. `git diff --cached --check` verifies whitespace.
-Result: PASS — 22 relative links, 4 skill headers, 2 pending-profile markers,
-and exact receipt. Staged whitespace check passed.
+## Git delivery
 
-No live installations, provider requests, test agents, deployment, or memory writes
-were performed. These walkthroughs demonstrate document paths, not compatibility.
+The public repository is `gaia-research/agent-playbook`. Main has a license-only
+bootstrap baseline. The feature branch retains the original scaffold history and
+incorporates that baseline, establishing a common ancestor without putting the
+implementation onto main. The final receipt identifies pushed HEAD. Verify the
+report at that head and review `main...HEAD`; do not merge or deploy.
 
-## Cloud agent continuation
+## Outstanding issues
 
-1. Read the supplied brief and this scaffold. Obtain cloud history through the
-   available supported mechanism; do not claim access from a summary alone.
-2. Extract established personal decisions with public-safe provenance and rationale.
-   Resolve newer/current instructions against older choices; keep project-specific
-   decisions out of universal policy. Populate the profile and YAML only after
-   verifying concrete IDs, supported efforts, and integration syntax. Resolve
-   fallback conflicts explicitly, and leave any remaining unknowns labeled.
-3. Verify official Claude/Codex/Pi/DeepSeek documentation and canonical repositories
-   read-only. Add only thin optional declarative setup guidance; do not install
-   anything without explicit consent. Repeat the three walkthroughs.
-4. Review all public content for private details. Under the brief's publishing
-   authorization, create `gaia-research/agent-playbook` publicly if permitted.
-   Establish an appropriate base branch, push this feature work, and open a PR.
-   Do not merge. Update this report with actual validation and remaining issues.
-5. Verify pushed HEAD and report, then return the brief's exact four-line receipt.
-
-The local repository is isolated from an unrelated parent Git repository. Use this
-folder's own Git root, never its parent. Existing local graft cache is ignored.
+No publication-scope blocker. Provider availability, native installed skill discovery,
+real model execution, unsupported historical aliases, and any separate Agy ACP
+integration require task-local verification before use. No promise of automatic
+memory synchronization or universally supported model/effort mappings is made.
