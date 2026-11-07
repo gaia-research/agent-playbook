@@ -35,8 +35,12 @@ mandatory package/CI, CLI, submodule, or duplicated pi-config implementation exi
   read online. Links and installation locations appear in
   [harnesses.md](profiles/marco/harnesses.md). No live skill installation was tested.
 
-Historical worker-flash/scout-flash/scout-lite aliases are absent. Existing exact
-candidates are listed separately from preference labels. Opus planner's configured
+Operator clarification preserves worker-flash → worker and scout-flash → scout;
+standalone alias files being absent does not mean the aliases are unsupported.
+scout-lite remains an option in another environment for cheaper Gemini Lite releases.
+Committed generic worker/scout definitions were independently checked: Flash
+medium/minimal respectively. Resolve concrete targets locally. Exact candidates
+remain separate from preferences. Opus planner's configured
 HIGH differs from MAX-first preference; preflight must resolve support before an
 override. Haiku has no verified concrete mapping. Worker/planner identities are not
 automatically read-only reviewers. Agy's observed planner persona is an Antigravity
@@ -67,7 +71,8 @@ removed-skill references, verify the receipt, and scan tracked content for priva
 paths/token patterns. Whitespace is checked with `git diff --check`.
 Results: PASS — 22 local Markdown links; exactly two matching skill headers;
 exact receipt; no stale removed-skill references or private-pattern matches.
-Both YAML documents parsed with the existing local `yaml` library (no dependency
+The corrected Flash aliases and retained scout-lite entry also passed explicit
+assertions. Both YAML documents parsed with the existing local `yaml` library (no dependency
 added): eight model preferences, six role mappings, and concurrency four.
 `git diff --check` passed. These are structural results, not provider tests.
 
@@ -76,12 +81,15 @@ added): eight model preferences, six role mappings, and concurrency four.
 The public repository is `gaia-research/agent-playbook`. Main has a license-only
 bootstrap baseline. The feature branch retains the original scaffold history and
 incorporates that baseline, establishing a common ancestor without putting the
-implementation onto main. The final receipt identifies pushed HEAD. Verify the
+implementation onto main. PR #1 is open against main: https://github.com/gaia-research/agent-playbook/pull/1.
+GitHub visibility is PUBLIC; the PR is unmerged. Remote handoff bytes and pushed
+HEAD were checked against local content, and HANDOFF.md appears in the PR diff.
+The final receipt identifies pushed HEAD. Verify the
 report at that head and review `main...HEAD`; do not merge or deploy.
 
 ## Outstanding issues
 
 No publication-scope blocker. Provider availability, native installed skill discovery,
-real model execution, unsupported historical aliases, and any separate Agy ACP
+real model execution, environment-specific alias resolution, and any separate Agy ACP
 integration require task-local verification before use. No promise of automatic
 memory synchronization or universally supported model/effort mappings is made.

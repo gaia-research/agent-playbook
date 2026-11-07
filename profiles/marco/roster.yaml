@@ -14,13 +14,22 @@ roles:
   advisor: {preferred: [sol, opus], designated_alternative: argon}
 # Preference lists are choices for explicit planning, never automatic fallback chains.
 provider_option: deepseek
-historical_aliases:
+aliases:
   planner-opus: present_source_config_high_effort
-  worker-flash: absent_use_explicitly_selected_versioned_candidate
-  scout-flash: absent
-  scout-lite: absent
+  worker-flash: worker
+  scout-flash: scout
+  scout-lite: environment_specific_gemini_lite_scout
   worker-argon: present_source_config_medium_effort
   worker-luna: present_source_config_medium_effort
 # MAX-first is an operator preference; planner-opus is currently pinned HIGH in
 # source. Verify support and explicit override syntax before selecting MAX.
 # Worker-named agents are not automatically suitable read-only reviewers.
+# Operator clarification: worker-flash/scout-flash clarify the generic worker/scout
+# identities. Resolve the target in the current environment, not by filename alone.
+# scout-lite is retained for cheaper Gemini Lite releases in another environment;
+# verify the locally available version and capability before using it.
+source_observed_targets:
+  worker: "antigravity/gemini-3.8-flash:medium"
+  scout: "antigravity/gemini-3.8-flash:minimal"
+# These match committed generic definitions at models.yaml's source_revision.
+# Their presence is source evidence, not proof of loaded aliases or account access.

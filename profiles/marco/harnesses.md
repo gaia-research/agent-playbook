@@ -44,7 +44,13 @@ report that limitation rather than invoking guessed syntax.
 
 The source-observed candidate mappings in models.yaml come from pi-config commit
 `176a5956b7c35775b204e4bdb9e432521f33d730` using committed agent files, not dirty local
-overrides. Historical `worker-flash`, `scout-flash`, and `scout-lite` files are absent;
+overrides. Standalone `worker-flash`, `scout-flash`, and `scout-lite` files are absent here,
+but the operator confirms `worker-flash` → `worker` and `scout-flash` → `scout`.
+Committed `worker.md` selects `antigravity/gemini-3.8-flash:medium`; `scout.md`
+selects `antigravity/gemini-3.8-flash:minimal`. Both targets were checked read-only.
+Resolve those generic agent definitions rather than requiring alias-named files.
+`scout-lite` remains an environment-specific cheaper Gemini Lite option; the
+operator has it in another environment and retains it for future Lite releases.
 `worker-flash-medium` is a candidate, never an automatic alias replacement.
 `planner-opus` pins HIGH; the operator's MAX-first preference requires checking
 support and the exact override syntax. Shared Sol/Terra variants have mixed effort

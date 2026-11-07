@@ -57,3 +57,10 @@ Historical aliases and configured mappings have different evidence status. Exact
 current capabilities, permissions, and credentials are local preflight facts;
 never store them as permanent guarantees. Preserve stable rationale and reconcile
 newer decisions without overwriting unrelated memory.
+
+Operator clarification (2026-11-08): `worker-flash` aliases `worker` and
+`scout-flash` aliases `scout`, making their intended Flash identity explicit.
+Retain `scout-lite`: it exists in another environment and is kept for cheaper
+Gemini Lite releases. Local absence does not invalidate an established alias.
+Resolve its actual provider/model/version and suitability in the target environment;
+never silently use a different model because the alias is missing locally.
