@@ -1,0 +1,35 @@
+# Declarative defaults; must be resolved against local runtime before launch.
+as_of: "2026-11-08"
+max_subagents: 4
+planner_effort_preference: [max, high]
+other_effort: workload_appropriate
+fallback_policy: fail_closed_without_explicit_authorization
+credential_changes: never_implicit
+roles:
+  lead: {preferred: [flash]}
+  planner: {preferred: [opus, sol], requires_authorized_route: true}
+  scout: {preferred: [flash]}
+  worker: {preferred: [flash, haiku]}
+  reviewer: {preferred: [luna, terra], designated_alternative: argon}
+  advisor: {preferred: [sol, opus], designated_alternative: argon}
+# Preference lists are choices for explicit planning, never automatic fallback chains.
+provider_option: deepseek
+aliases:
+  planner-opus: present_source_config_high_effort
+  worker-flash: worker
+  scout-flash: scout
+  scout-lite: environment_specific_gemini_lite_scout
+  worker-argon: present_source_config_medium_effort
+  worker-luna: present_source_config_medium_effort
+# MAX-first is an operator preference; planner-opus is currently pinned HIGH in
+# source. Verify support and explicit override syntax before selecting MAX.
+# Worker-named agents are not automatically suitable read-only reviewers.
+# Operator clarification: worker-flash/scout-flash clarify the generic worker/scout
+# identities. Resolve the target in the current environment, not by filename alone.
+# scout-lite is retained for cheaper Gemini Lite releases in another environment;
+# verify the locally available version and capability before using it.
+source_observed_targets:
+  worker: "antigravity/gemini-3.8-flash:medium"
+  scout: "antigravity/gemini-3.8-flash:minimal"
+# These match committed generic definitions at models.yaml's source_revision.
+# Their presence is source evidence, not proof of loaded aliases or account access.

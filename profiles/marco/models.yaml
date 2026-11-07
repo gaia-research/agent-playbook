@@ -1,0 +1,48 @@
+# Declarative profile data, not native harness config.
+as_of: "2026-11-08"
+source: "https://github.com/mbtiongson1/pi-config"
+source_revision: "176a5956b7c35775b204e4bdb9e432521f33d730"
+evidence: source_config_only
+runtime_verified: false
+models:
+  - alias: flash
+    provider: antigravity
+    model_id: gemini-3.8-flash
+    observed_effort: medium
+    source_agent: worker-flash-medium
+  - alias: opus
+    provider: anthropic
+    model_id: claude-opus-5-5
+    observed_effort: high
+    source_agent: planner-opus
+  - alias: sol
+    provider: openai
+    model_id: gpt-6.1-sol
+    observed_effort: max
+    source_agent: planner-sol
+  - alias: luna
+    provider: openai
+    model_id: gpt-6-luna
+    observed_effort: high
+    source_agent: worker-luna-high
+  - alias: terra
+    provider: openai-codex
+    model_id: gpt-6.1-terra
+    observed_effort: max
+    source_agent: planner-terra
+  - alias: argon
+    provider: antigravity
+    model_id: gemini-4-argon
+    observed_effort: max
+    source_agent: planner-argon
+  - alias: deepseek
+    provider: deepseek
+    model_id: deepseek-flash
+    observed_effort: high
+    source_agent: reviewer-dsflash
+  - alias: haiku
+    provider: anthropic
+    model_id: null
+    evidence: operator_preference_only
+# observed_effort is not a supported-efforts list. Check the actual model catalog.
+# No automatic translation from display labels or provider/billing substitutions.
