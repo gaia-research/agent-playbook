@@ -14,8 +14,8 @@ existing explicit tier-first routing, planner-effort preferences, budgets,
 subagent concurrency, identity constraints, and review/merge/deployment gates.
 No automatic escalation to Fable, Mythos, or premium fast mode.
 
-Use Claude API model ID `claude-fable-5-2`; on Amazon Bedrock use
-`anthropic.claude-fable-5-2`. These IDs are **provider-documented**, not
+Use the documented model ID `claude-fable-5-2` on supported Claude
+platforms. This ID is **provider-documented**, not
 evidence that Pi, Antigravity, Claude Code, or the user's account can run them.
 Resolve the exact provider/model/effort and effective fallbacks by local preflight.
 If the requested route is unavailable, stop that dispatch and seek an explicitly
