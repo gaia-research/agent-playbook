@@ -16,6 +16,10 @@ when available and applicable platform/project instructions in all cases.
 5. For capable agents, specify outcomes and let them choose routine implementation
    details. For mechanical workers, specify exact transformations and checks.
 6. Prefer an existing canonical skill/tool; avoid recreating its instructions.
+   When an operator explicitly chooses a model, check the adopted profile's
+   model-specific notes and current provider prompting guidance. Apply only
+   compatible advice; retain higher-priority authority, scope, and security
+   constraints.
 7. Request concise output with useful evidence, revision identifiers, uncertainty,
    and outstanding issues. Remove procedural detail that does not reduce risk or
    resolve ambiguity. Do not hide necessary evidence to meet a brevity target.
