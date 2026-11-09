@@ -20,6 +20,13 @@ Haiku for narrow low-cost execution; authorized Claude Opus for difficult planni
 architecture, and synthesis; Sol for architecture-heavy reasoning; Luna and Terra
 for verification/review; Argon for designated escalation or independent review;
 DeepSeek API as a provider option. Verify access and capabilities at use time.
+
+Operator model update (2026-11-10): **Claude Fable 5.2 supersedes Fable
+5.1 whenever an authorized route already calls for Fable.** This is not
+a default upgrade from Opus, Haiku, Flash, or any other tier. Follow the
+[officially sourced Fable 5.2 prompting and migration note](fable-5-2.md)
+for effort calibration, completion, approval, delegation, and harness
+compatibility. Local model availability still requires preflight.
 Codex and Claude are primary coding environments. Pi with `@parke.dev/pi-subagent`
 is preferred delegation infrastructure; use Agy/Antigravity within Pi where verified.
 
