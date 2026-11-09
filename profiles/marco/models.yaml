@@ -2,7 +2,7 @@
 as_of: "2026-11-08"
 source: "https://github.com/mbtiongson1/pi-config"
 source_revision: "176a5956b7c35775b204e4bdb9e432521f33d730"
-evidence: source_config_only
+evidence: mixed_source_config_and_official_provider_docs
 runtime_verified: false
 models:
   - alias: flash
@@ -15,6 +15,14 @@ models:
     model_id: claude-opus-5-5
     observed_effort: high
     source_agent: planner-opus
+  - alias: fable
+    provider: anthropic
+    model_id: claude-fable-5-2
+    preferred_over: claude-fable-5-1
+    operator_decision: "2026-11-10"
+    evidence: official_provider_docs_not_runtime
+    documentation: https://platform.claude.com/docs/en/models/fable-5-2/overview
+    runtime_verified: false
   - alias: sol
     provider: openai
     model_id: gpt-6.1-sol
