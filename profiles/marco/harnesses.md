@@ -71,6 +71,18 @@ configuration, or block specialist dispatch pending a separately authorized fix.
 an implicit repair. Concurrency defaults to four for this profile, regardless of
 larger runtime ceilings. A failed preflight is not permission to switch credentials.
 
+## Claude Fable 5.2 migration
+
+The operator's 2026-11-10 preference is to select Fable 5.2 rather than
+Fable 5.1 **only when Fable was otherwise authorized**. Read the
+[model-specific prompt and migration note](fable-5-2.md) and the linked
+official Anthropic documentation before changing a harness. In particular,
+check the resolved `claude-fable-5-2` route, explicit effort, preserved
+thinking and prefix binding, unsupported API parameter/tool choices, and
+the actual provider's retention rules. Old Pi-config source observations
+do not establish Fable availability or prove the current Pi integration
+is compatible. This repository makes no runtime configuration changes.
+
 ## Agy, Antigravity, and DeepSeek
 
 The committed `planner-agy` definition routes to
