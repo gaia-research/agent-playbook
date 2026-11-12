@@ -1,18 +1,19 @@
 # Declarative defaults; must be resolved against local runtime before launch.
-as_of: "2026-11-08"
+as_of: "2026-11-13"
 max_subagents: 4
 planner_effort_preference: [max, high]
 other_effort: workload_appropriate
 fallback_policy: fail_closed_without_explicit_authorization
 credential_changes: never_implicit
 roles:
-  lead: {preferred: [flash]}
+  lead: {preferred: [flash], hydrogen_effort: high}
   planner: {preferred: [opus, sol], requires_authorized_route: true}
-  scout: {preferred: [flash]}
-  worker: {preferred: [flash, haiku]}
+  scout: {preferred: [flash], hydrogen_effort: low}
+  worker: {preferred: [flash, haiku], hydrogen_effort: medium}
   reviewer: {preferred: [luna, terra], designated_alternative: argon}
   advisor: {preferred: [sol, opus], designated_alternative: argon}
 # Preference lists are choices for explicit planning, never automatic fallback chains.
+reserve_flash: deepseek
 provider_option: deepseek
 aliases:
   planner-opus: present_source_config_high_effort
@@ -31,5 +32,7 @@ aliases:
 source_observed_targets:
   worker: "antigravity/gemini-3.8-flash:medium"
   scout: "antigravity/gemini-3.8-flash:minimal"
-# These match committed generic definitions at models.yaml's source_revision.
+# These are historical committed targets at models.yaml's source_revision, NOT current desired routes.
+# Desired Gemini successor is gemini-4-hydrogen after Pi provider/effort preflight.
+# DeepSeek V4.1 Flash is a separate explicitly selected reserve.
 # Their presence is source evidence, not proof of loaded aliases or account access.
