@@ -43,7 +43,8 @@ Use [the profile template](profiles/template/PROFILE.md), or explicitly opt into
 either profile. The YAML files are playbook data, not native harness config.
 See [harness boundaries](profiles/marco/harnesses.md) before adapting them.
 The profile also records the conditional [Fable 5.2 preference and
-provider-specific prompting guidance](profiles/marco/fable-5-2.md); it is not
+provider-specific prompting guidance](profiles/marco/fable-5-2.md) and
+[Gemini 4 Hydrogen migration](profiles/marco/gemini-4-hydrogen.md); it is not
 a universal default or a proof of model availability.
 
 Examples: [task](examples/task.md), [review](examples/review.md).

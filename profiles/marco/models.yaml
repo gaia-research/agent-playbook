@@ -1,15 +1,19 @@
 # Declarative profile data, not native harness config.
-as_of: "2026-11-08"
+as_of: "2026-11-13"
 source: "https://github.com/mbtiongson1/pi-config"
 source_revision: "176a5956b7c35775b204e4bdb9e432521f33d730"
 evidence: mixed_source_config_and_official_provider_docs
 runtime_verified: false
 models:
   - alias: flash
-    provider: antigravity
-    model_id: gemini-3.8-flash
-    observed_effort: medium
+    preferred_model_id: gemini-4-hydrogen
+    intended_provider: antigravity
+    operator_decision: "2026-11-13"
+    recommended_efforts: {scout: low, worker: medium, lead: high}
+    previous_source_observed_model: gemini-3.8-flash
     source_agent: worker-flash-medium
+    runtime_verified: false
+    evidence: official_google_api_model_id_not_pi_availability
   - alias: opus
     provider: anthropic
     model_id: claude-opus-5-5
@@ -44,6 +48,8 @@ models:
     observed_effort: max
     source_agent: planner-argon
   - alias: deepseek
+    role: reserve_flash
+    variant_preference: DeepSeek V4.1 Flash
     provider: deepseek
     model_id: deepseek-flash
     observed_effort: high
