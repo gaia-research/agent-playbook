@@ -15,11 +15,13 @@ Default maximum subagent concurrency is **four**, unless explicitly overridden.
 Planners prefer **MAX when supported, otherwise HIGH**; other roles use workload-
 appropriate effort. Unsupported settings are not permission to silently substitute.
 
-Preferences: Gemini Flash for economical leadership/scouting/routine work; Claude
+Preferences: Gemini 4 Hydrogen for economical leadership/scouting/routine work; DeepSeek V4.1 Flash is a distinct reserve agent; Claude
 Haiku for narrow low-cost execution; authorized Claude Opus for difficult planning,
 architecture, and synthesis; Sol for architecture-heavy reasoning; Luna and Terra
 for verification/review; Argon for designated escalation or independent review;
 DeepSeek API as a provider option. Verify access and capabilities at use time.
+
+Operator model update (2026-11-13): **Gemini 4 Hydrogen supersedes Gemini 3.8 Flash in Gemini Flash roles**, without replacing DeepSeek V4.1 Flash (reserve) or other providers. See [Hydrogen prompting and Pi migration](gemini-4-hydrogen.md). LOW scouts, MEDIUM workers, HIGH leads; XHIGH only when justified and authorized. Local Pi availability still requires preflight.
 
 Operator model update (2026-11-10): **Claude Fable 5.2 supersedes Fable
 5.1 whenever an authorized route already calls for Fable.** This is not
