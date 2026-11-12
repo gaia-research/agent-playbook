@@ -71,6 +71,16 @@ configuration, or block specialist dispatch pending a separately authorized fix.
 an implicit repair. Concurrency defaults to four for this profile, regardless of
 larger runtime ceilings. A failed preflight is not permission to switch credentials.
 
+## Gemini 4 Hydrogen migration (2026-11-13)
+
+The operator now prefers Hydrogen over Gemini 3.8 Flash for Gemini Flash
+lead/scout/worker routes; DeepSeek V4.1 Flash remains a separate reserve.
+The old committed 3.8 Flash entries above are historical observations, not
+current dispatch instructions. See [Hydrogen guidance](gemini-4-hydrogen.md)
+for prompting, provider ID validation, tool-signature requirements, native
+thinking levels, and Pi subagent preflight. This repository does not modify
+pi-config or establish Antigravity provider support.
+
 ## Claude Fable 5.2 migration
 
 The operator's 2026-11-10 preference is to select Fable 5.2 rather than
