@@ -42,7 +42,7 @@ Use [the profile template](profiles/template/PROFILE.md), or explicitly opt into
 [Marco's profile](profiles/marco/PROFILE.md). Core skills must work with
 either profile. The YAML files are playbook data, not native harness config.
 See [harness boundaries](profiles/marco/harnesses.md) before adapting them.
-The profile also records the conditional [Fable 5.2 preference and
+The profile records [GPT-6.2 Sol/Astra checkpoint succession and prompting guidance](profiles/marco/gpt-6-2.md), plus the conditional [Fable 5.2 preference and
 provider-specific prompting guidance](profiles/marco/fable-5-2.md); it is not
 a universal default or a proof of model availability.
 

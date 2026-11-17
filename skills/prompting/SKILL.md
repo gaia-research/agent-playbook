@@ -19,7 +19,9 @@ when available and applicable platform/project instructions in all cases.
    When an operator explicitly chooses a model, check the adopted profile's
    model-specific notes and current provider prompting guidance. Apply only
    compatible advice; retain higher-priority authority, scope, and security
-   constraints.
+   constraints. For Marco's adopted profile, apply the global Sol/Astra
+   checkpoint succession in `profiles/marco/gpt-6-2.md` before dispatch;
+   preflight the resulting exact checkpoint without silent fallback.
 7. Request concise output with useful evidence, revision identifiers, uncertainty,
    and outstanding issues. Remove procedural detail that does not reduce risk or
    resolve ambiguity. Do not hide necessary evidence to meet a brevity target.

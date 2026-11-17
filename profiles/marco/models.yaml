@@ -1,5 +1,5 @@
 # Declarative profile data, not native harness config.
-as_of: "2026-11-08"
+as_of: "2026-11-18"
 source: "https://github.com/mbtiongson1/pi-config"
 source_revision: "176a5956b7c35775b204e4bdb9e432521f33d730"
 evidence: mixed_source_config_and_official_provider_docs
@@ -25,9 +25,20 @@ models:
     runtime_verified: false
   - alias: sol
     provider: openai
-    model_id: gpt-6.1-sol
+    model_id: gpt-6.2-sol
+    supersedes: gpt-6.1-sol
+    operator_decision: "2026-11-18"
+    documentation: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.2-sol
+    runtime_verified: false
     observed_effort: max
     source_agent: planner-sol
+  - alias: astra
+    provider: openai
+    model_id: gpt-6.2-astra
+    supersedes: gpt-6-astra
+    operator_decision: "2026-11-18"
+    documentation: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.2-astra
+    runtime_verified: false
   - alias: luna
     provider: openai
     model_id: gpt-6-luna
@@ -52,5 +63,8 @@ models:
     provider: anthropic
     model_id: null
     evidence: operator_preference_only
+# Checkpoint succession is global within the matching Sol/Astra family; unrelated
+# families and explicit role permissions do not change. Existing observed effort
+# is historical source evidence, not a runtime-verified 6.2 capability.
 # observed_effort is not a supported-efforts list. Check the actual model catalog.
 # No automatic translation from display labels or provider/billing substitutions.
