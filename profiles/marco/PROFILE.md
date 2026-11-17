@@ -21,7 +21,7 @@ architecture, and synthesis; Sol for architecture-heavy reasoning; Luna and Terr
 for verification/review; Argon for designated escalation or independent review;
 DeepSeek API as a provider option. Verify access and capabilities at use time.
 
-Operator model update (2026-11-10): **Claude Fable 5.2 supersedes Fable
+Operator checkpoint succession (2026-11-18): **GPT-6.2 Sol replaces GPT-6.1 Sol, and GPT-6.2 Astra replaces GPT-6 Astra globally** wherever those exact families are selected. This updates model identity, not an authorization to move between tiers, alter role assignments, silently fall back, or bypass local availability preflight. See [GPT-6.2 migration guidance](gpt-6-2.md). Astra may be absent from historical model-source snapshots but is now explicitly recorded as a current operator preference.\n\nOperator model update (2026-11-10): **Claude Fable 5.2 supersedes Fable
 5.1 whenever an authorized route already calls for Fable.** This is not
 a default upgrade from Opus, Haiku, Flash, or any other tier. Follow the
 [officially sourced Fable 5.2 prompting and migration note](fable-5-2.md)
